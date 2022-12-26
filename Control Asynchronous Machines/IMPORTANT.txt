@@ -1,0 +1,35 @@
+******************************
+Code developpé par Antoine Sfeir & Louis Saad en utilisant MATLAB & Simulink 2018b
+pour le "Travail Corrigé - Entrainnement à Vitesse Variable"
+Presenté à PhD. Ragi Ghosn
+Mars 2021
+
+Université Saint-Joseph in Beirut - Faculté d'Ingénieurie - ESIB
+******************************
+
+Pour le bon fonctionnement du code il est nécessaire d'extraire les fichiers du zipped folder
+
+------------------------------------------------------------------------------------------------
+
+MAS23_init.m		: Code d'initialisation des variables de la MAS et met en fonctionnement la totalité de la simulation
+MAS23_sim.slx		: Fichier Simulink pour la simulation de la MAS 
+visualisation.m		: M file qui initialise le fichier de simulation "MAS23_sim.slx" et donne les résultats de la simulation en graphes
+Regulateurs.slx		: Fichier Simulink pour la simulation de la MAS en utilisant ses fonctions de transferts
+FluxCloche.m		: M file contenant la relation qui donne la forme en cloche du flux de la MAS utiliser dans "MAS23_sim.slx" comme 'MATLAB function'
+Omega_mr.m		: M file contenant la relation de w_mr de la MAS utiliser dans "MAS23_sim.slx" comme 'MATLAB function'
+app1.mlapp		: Application contenant la GUI pour donner les conditions de fonctionnement de la MAS
+
+------------------------------------------------------------------------------------------------
+
+Pour simuler la MAS et affichier les resultats et les graphes, veuillez ouvrir le fichier "MAS23_init.m" et compiler le code.
+Merci de constater que la vitesse de référence ne s'implique qu'après 2 secondes, et le couple constant après 6 secondes
+
+================================================================================================
+EXPLICATION DU CODE:
+
+Après avoir compiler le code "MAS23_init.m", les paramètres d'initialisation de la MAS vont être sauvgarder dans le "Workspace" et va ouvrir
+une nouvelle fenêtre (GUI). De cette fenêtre, on peut spécifier les paramètres de simulation de la MAS (vitesse de référence, couple de charge,
+tps de simulation, resistance rotorique variable). Ensuite, en cliquant sur le boutton "SIMULATION", les paramètres choisit vont être sauvegarder
+et on va être rediriger vers le fichier "visualisation.m" qui va initialiser, à son tour, le fichier de simulation de la MAS, "MAS23_sim.slx",
+et ensuite afficher les résultats sous forme de graphes de la vitesse de l'arbre, le couple électromagnétique, les courant Id et Iq, 
+et les Flux rotorique D et Q de la MAS.
